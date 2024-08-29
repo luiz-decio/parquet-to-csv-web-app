@@ -16,5 +16,8 @@ resource "aws_instance" "app_instance" {
             sudo apt-get install -y docker.io git
             sudo systemctl start docker
             sudo systemctl enable socker
-  
+
+            # Clone GitHub repo
+
+            
 }
