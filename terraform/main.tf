@@ -19,5 +19,14 @@ resource "aws_instance" "app_instance" {
 
             # Clone GitHub repo
             git clone https://github.com/luiz-decio/parquet-to-csv-web-app.git
-            
+
+            # Build and run Docker container
+            cd /app
+            sudo docker build -t streamlit-app .
+            sudo docker run -d -p 8501:8501 streamlit-app
+            EOF
+  tags = {
+    Name = "streamlit-app"
+  }
+
 }
