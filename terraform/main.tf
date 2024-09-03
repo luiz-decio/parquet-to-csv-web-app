@@ -18,6 +18,6 @@ resource "aws_instance" "app_instance" {
             sudo systemctl enable socker
 
             # Clone GitHub repo
-
+            git clone https://github.com/luiz-decio/parquet-to-csv-web-app.git
             
 }
